@@ -9,7 +9,7 @@ generator pothos {
 }
 datasource db {
   provider = "postgresql"
-  url      = process.env
+  url      =  env("DATABASE_URL")
 }
 model User {
   id        Int       @id @default(autoincrement()) @map("_id")
